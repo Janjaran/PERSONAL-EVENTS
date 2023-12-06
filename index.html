@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Events</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <header>
+    <div>
+      <img src="own-logo.png" alt="Your Logo" style="max-width: 900px; height: auto;">
+  </div>
+      <button id="darkModeButton" class="custom-button"></i> Dark Mode</button>
+    <form id="eventForm">
+      
+      <label for="eventName">Event Name</label>
+      <input type="text" id="eventName" required>
+      
+      <label for="eventDate">Date</label>
+      <input type="date" id="eventDate" required>
+      
+      <label for="eventTime">Time</label>
+      <input type="time" id="eventTime" required>
+      
+      <label for="eventLocation">Location</label>
+      <input type="text" id="eventLocation" required>
+      <button type="button" id="selectLocationButton">Select Location on Map</button>
+      
+      <label for="eventNotes">Notes</label>
+      <textarea id="eventNotes"></textarea>
+      
+      <button type="submit">Add Event</button>
+    </form>
+    <input type="text" id="searchName" placeholder="Search by name">
+<input type="date" id="searchDate" placeholder="Search by date">
+<input type="text" id="searchLocation" placeholder="Search by location">
+<button id="searchButton" class="custom-button"><i class="fas fa-search"></i> Search</button>
+  </header>
+  
+  <main>
+    
+    <div id="eventList">
+    
+    </div>
+    <div id="map" style="height: 400px;"></div>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 Personal Events App</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
